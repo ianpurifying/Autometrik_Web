@@ -282,15 +282,14 @@ const Newsletter = () => (
     <div className="max-w-xl mx-auto px-6">
       <h3 className="text-xl font-bold text-gray-900 mb-2">Stay updated.</h3>
       <p className="text-gray-500 font-medium mb-8">Join us on the road to the education revolution.</p>
-      <form className="flex items-center gap-2 max-w-sm mx-auto bg-gray-50 p-1.5 rounded-full border border-gray-200 focus-within:ring-2 focus-within:ring-emerald-500/20 focus-within:border-emerald-500 transition-all">
+      <form className="flex items-center gap-2 max-w-sm mx-auto bg-gray-50 p-1.5 rounded-full border border-gray-200 focus-within:ring-2 focus-within:ring-emerald-500/20 focus-within:border-emerald-500 transition-all" onSubmit={(e) => e.preventDefault()}>
         <input 
-          aria-label="Email address"
           type="email" 
           placeholder="your@email.com" 
           className="bg-transparent flex-1 px-4 py-2 text-sm outline-none text-gray-900 font-medium"
           required
         />
-        <button type="button" className="bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-full text-sm transition-colors cursor-pointer">
+        <button type="submit" className="bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-2 rounded-full text-sm transition-colors">
           Subscribe
         </button>
       </form>

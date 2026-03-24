@@ -1,51 +1,29 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: 'Autometrik — The Future of Academic Management',
-  description:
-    'A serverless academic platform for managing organizations, classes, quizzes, assessments, analytics, and audit logs. Built for security, scale, and intelligent insights.',
-  keywords: [
-    'academic management',
-    'assessment platform',
-    'quiz engine',
-    'analytics',
-    'education technology',
-    'serverless',
-    'autometrik',
-  ],
+  title: "Autometrik | Automate Assessment",
+  description: "The comprehensive web-based platform for Philippine K-12 teachers to automate MPS computation, item analysis, and quiz management.",
   openGraph: {
-    title: 'Autometrik — The Future of Academic Management',
-    description:
-      'Streamline your academic organization with intelligent assessments, real-time analytics, and role-based access control.',
-    url: 'https://autometrik.online',
-    siteName: 'Autometrik',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Autometrik — The Future of Academic Management',
-    description:
-      'Streamline your academic organization with intelligent assessments, real-time analytics, and role-based access control.',
+    title: "Autometrik | Automate Assessment",
+    description: "The comprehensive web-based platform for Philippine K-12 teachers.",
+    type: "website",
   },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className="dark">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="antialiased">{children}</body>
+    <html lang="en">
+      <body className={`${inter.variable} font-sans antialiased text-gray-900 bg-gray-50`}>
+        {children}
+      </body>
     </html>
   );
 }
