@@ -57,12 +57,10 @@ const Hero = () => (
         The comprehensive web-based platform for Philippine K-12 teachers. Automating MPS computation and item analysis.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-        <Link href="#" className="font-semibold text-gray-900 hover:text-indigo-600 transition-colors inline-flex items-center gap-1">
-          Read our documentation <ArrowRight size={18} />
+        <Link href="https://app.autometrik.online/" className="font-semibold text-gray-900 hover:text-indigo-600 transition-colors inline-flex items-center gap-1">
+          Go to APP <ArrowRight size={18} />
         </Link>
-        <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full font-semibold transition-all shadow-lg shadow-emerald-500/30 text-lg">
-          Get Started
-        </button>
+
       </div>
     </div>
   </header>
