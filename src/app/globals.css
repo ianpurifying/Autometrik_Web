@@ -1,31 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f9fafb;
-  --foreground: #111827;
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #111827;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  overflow-x: hidden;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Wavy background utilities for the Hero section */
-.bg-grid-pattern {
-  background-image: linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* Base Utility Classes for Glassmorphism & Patterns */
+.glass-panel {
+  @apply bg-white/60 backdrop-blur-xl border border-white/40 shadow-sm rounded-2xl;
 }
 
-/* Abstract blob / wave patterns matching the image */
-.bg-wave-pattern {
-  background: radial-gradient(circle at 50% 0%, rgba(167, 243, 208, 0.4), transparent 50%),
-              radial-gradient(circle at 100% 0%, rgba(199, 210, 254, 0.4), transparent 50%),
-              radial-gradient(circle at 0% 100%, rgba(254, 202, 202, 0.4), transparent 50%);
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600;
 }
 
-.shadow-soft {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+.text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-500;
+}
+
+.bg-pattern {
+  background-image: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 0%, rgba(79, 70, 229, 0.04) 0%, transparent 40%),
+                    repeating-linear-gradient(rgba(0,0,0,0.02) 0px, transparent 1px, transparent 40px, rgba(0,0,0,0.02) 41px);
+  background-size: 100% 100%, 100% 100%, 100% 41px;
 }
