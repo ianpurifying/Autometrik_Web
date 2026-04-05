@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { 
   ArrowRight, CheckCircle2, Scan, FileText, 
   LineChart, Users, BookOpen, Clock, Calculator, 
@@ -19,9 +20,7 @@ export default function LandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-x-0 border-t-0 rounded-none bg-white/70">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white font-bold text-lg">
-              A
-            </div>
+            <Image src="/logo.png" alt="AutoMetrik Logo" width={32} height={32} className="w-8 h-8 object-contain" />
             <span className="font-bold text-xl tracking-tight text-gray-900">AutoMetrik</span>
           </div>
           
@@ -281,7 +280,7 @@ export default function LandingPage() {
       <footer className="border-t border-gray-100 bg-white/50 backdrop-blur-sm mt-auto relative z-10">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-             <div className="w-6 h-6 rounded-md bg-gray-900 flex items-center justify-center text-white font-bold text-xs">A</div>
+             <Image src="/logo.png" alt="AutoMetrik Logo" width={24} height={24} className="w-6 h-6 object-contain" />
              <span className="font-bold text-gray-900 tracking-tight">AutoMetrik</span>
           </div>
           <p className="text-sm text-gray-400">
